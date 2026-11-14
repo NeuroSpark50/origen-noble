@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Origen Noble — Manual de marca · Altura serena</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    :root { --ink:#0E0D0C; --cream:#EFE8DA; --sand:#E0C9A8; --gold:#B8975A; --cord:#4C2523; --muted:#b8b0a5; --line:rgba(239,232,218,.23); }
+    * { box-sizing:border-box; }
+    html { background:#20201e; }
+    body { margin:0; background:#20201e; color:var(--cream); font-family:Archivo,Arial,sans-serif; font-size:15px; line-height:1.42; }
+    .page { position:relative; width:1280px; height:720px; margin:24px auto; overflow:hidden; background:var(--ink); page-break-after:always; }
+    .page.cream { background:var(--cream); color:var(--ink); --line:rgba(14,13,12,.17); }
+    .page.sand { background:var(--sand); color:var(--ink); --line:rgba(14,13,12,.18); }
+    .page.cord { background:var(--cord); color:var(--cream); }
+    .page::after { content:""; position:absolute; inset:28px; border:1px solid var(--line); pointer-events:none; }
+    .inside { position:relative; z-index:1; height:100%; padding:65px 78px 62px; }
+    .eyebrow { color:var(--gold); font-size:10px; letter-spacing:.19em; font-weight:700; text-transform:uppercase; }
+    .cream .eyebrow,.sand .eyebrow { color:var(--cord); }
+    h1,h2,h3,p { margin:0; }
+    h1 { font:64px/ .95 'Archivo Black','Arial Black',sans-serif; letter-spacing:-.055em; }
+    h2 { font:40px/1 'Archivo Black','Arial Black',sans-serif; letter-spacing:-.045em; }
+    h3 { font:20px/1.1 'Archivo Black','Arial Black',sans-serif; letter-spacing:-.03em; }
+    .serif { font-family:'Instrument Serif',Georgia,serif; font-style:italic; font-weight:400; letter-spacing:-.02em; }
+    .display-noble { font:92px/.7 'Instrument Serif',Georgia,serif; font-style:italic; color:var(--gold); letter-spacing:-.06em; }
+    .caption { color:var(--muted); font-size:11px; line-height:1.35; }
+    .cream .caption,.sand .caption { color:#5a5048; }
+    .footer { position:absolute; z-index:2; display:flex; align-items:center; justify-content:space-between; bottom:43px; left:78px; right:78px; padding-top:12px; border-top:1px solid var(--line); font-size:10px; letter-spacing:.12em; text-transform:uppercase; }
+    .folio { color:var(--gold); }
+    .cream .folio,.sand .folio { color:var(--cord); }
+    .logo-line { display:flex; align-items:center; gap:15px; }
+    .iso { object-fit:contain; display:block; }
+    .iso.white { filter:none; }
+    .iso.ink { filter:brightness(0) saturate(100%) invert(5%) sepia(2%) saturate(2600%) hue-rotate(0deg) brightness(94%) contrast(97%); }
+    .iso.gold { filter:brightness(0) saturate(100%) invert(66%) sepia(23%) saturate(805%) hue-rotate(3deg) brightness(88%) contrast(85%); }
+    .wordmark .origin { display:block; font:31px/.82 'Archivo Black','Arial Black',sans-serif; letter-spacing:-.055em; }
+    .wordmark .noble { display:block; margin-top:7px; color:var(--gold); font:40px/.75 'Instrument Serif',Georgia,serif; font-style:italic; letter-spacing:-.06em; }
+    .wordmark.dark .origin { color:var(--ink); } .wordmark.dark .noble { color:var(--cord); }
+    .pill { display:inline-flex; align-items:center; border:1px solid rgba(184,151,90,.65); color:var(--gold); padding:5px 8px; font-size:9px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; }
+    .cream .pill,.sand .pill { border-color:rgba(76,37,35,.5); color:var(--cord); }
+    .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:52px; }
+    .grid3 { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+    .line { height:1px; background:var(--line); margin:20px 0; }
+    .list { padding:0; margin:0; list-style:none; }
+    .list li { padding:8px 0 8px 17px; position:relative; border-bottom:1px solid var(--line); }
+    .list li::before { content:'—'; position:absolute; left:0; color:var(--gold); }
+    .cream .list li::before,.sand .list li::before { color:var(--cord); }
+    .note { border-left:2px solid var(--gold); padding:10px 0 10px 14px; color:var(--muted); font-size:12px; }
+    .cream .note,.sand .note { border-color:var(--cord); color:#514941; }
+    .data-label { color:var(--gold); font-size:9px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; }
+    .cream .data-label,.sand .data-label { color:var(--cord); }
+    .cover { background:linear-gradient(122deg,#0d0c0b 0%,#0e0d0c 58%,#251d19 100%); }
+    .cover .altitude-line { position:absolute; left:0; right:0; bottom:0; height:298px; opacity:.27; background:repeating-radial-gradient(ellipse at 28% 118%,transparent 0 25px,rgba(184,151,90,.48) 26px 27px,transparent 28px 54px); transform:scaleX(1.35); }
+    .cover .hero { width:660px; padding-top:68px; }
+    .cover .isocover { position:absolute; width:430px; right:70px; top:135px; opacity:.96; }
+    .cover .rule { height:2px; width:90px; background:var(--gold); margin:29px 0 20px; }
+    .cover .subtitle { max-width:420px; color:#d5cec1; font-size:17px; }
+    .quote { font:38px/1.02 'Instrument Serif',Georgia,serif; font-style:italic; max-width:560px; letter-spacing:-.025em; }
+    .quote::before { content:'“'; color:var(--gold); } .quote::after { content:'”'; color:var(--gold); }
+    .stack { display:grid; gap:15px; }
+    .essence-card { border-top:2px solid var(--gold); padding-top:13px; }
+    .cream .essence-card,.sand .essence-card { border-color:var(--cord); }
+    .essence-card p { margin-top:6px; font-size:13px; }
+    .safe { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:20px; }
+    .safe .good,.safe .bad { padding:16px; min-height:112px; border:1px solid var(--line); }
+    .safe .good { border-color:rgba(184,151,90,.8); } .safe .bad { border-color:rgba(76,37,35,.7); }
+    .safe b { display:block; font-size:11px; letter-spacing:.12em; text-transform:uppercase; margin-bottom:8px; }
+    .palette { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-top:28px; }
+    .swatch { height:198px; display:flex; flex-direction:column; justify-content:flex-end; padding:18px; border:1px solid rgba(255,255,255,.22); }
+    .swatch b { font-size:18px; } .swatch span { font-size:11px; margin-top:4px; }
+    .color-note { font-size:11px; margin-top:22px; color:#4f473f; }
+    .type-test { border-top:1px solid var(--line); padding-top:17px; }
+    .type-origin { font:51px/.9 'Archivo Black','Arial Black',sans-serif; letter-spacing:-.055em; }
+    .type-noble { font:71px/.7 'Instrument Serif',Georgia,serif; font-style:italic; letter-spacing:-.065em; color:var(--cord); }
+    .type-body { font-size:14px; max-width:420px; }
+    .layout-demo { margin-top:20px; height:382px; border:1px solid var(--line); display:grid; grid-template-columns:1.08fr .92fr; padding:22px; gap:22px; }
+    .layout-demo .side { border-left:1px solid var(--line); padding-left:20px; }
+    .map-lines { position:absolute; right:-60px; top:100px; width:480px; height:480px; opacity:.16; background:repeating-radial-gradient(ellipse at 50% 55%, transparent 0 24px, var(--gold) 25px 26px,transparent 27px 50px); transform:rotate(-12deg); }
+    .pack { position:relative; width:215px; height:395px; overflow:hidden; border-radius:8px 8px 10px 10px; background:linear-gradient(104deg,#0a0a09,#1a1816 47%,#080807); border:1px solid #45403a; box-shadow:14px 18px 0 rgba(0,0,0,.18); color:var(--cream); }
+    .pack:before { content:''; position:absolute; top:20px; left:0; right:0; height:1px; background:#5d564e; box-shadow:0 7px 0 rgba(97,91,84,.5); }
+    .pack .zip { position:absolute; top:37px; left:20px; right:20px; height:3px; background:repeating-linear-gradient(90deg,var(--cream) 0 2px,transparent 2px 4px); opacity:.65; }
+    .pack .iso-pack { width:65px; height:53px; margin:60px auto 8px; }
+    .pack .pack-brand { text-align:center; }
+    .pack .pack-brand b { display:block; font:22px/.8 'Archivo Black','Arial Black',sans-serif; letter-spacing:-.055em; }
+    .pack .pack-brand i { display:block; font:25px/.76 'Instrument Serif',Georgia,serif; font-style:italic; color:var(--gold); letter-spacing:-.06em; }
+    .pack .pack-rule { height:1px; width:64px; background:var(--gold); margin:18px auto 10px; }
+    .pack .pack-line { text-align:center; text-transform:uppercase; letter-spacing:.14em; font-size:9px; font-weight:700; }
+    .pack .pack-info { position:absolute; left:22px; right:22px; bottom:23px; border-top:1px solid rgba(239,232,218,.35); padding-top:10px; font-size:8px; line-height:1.7; letter-spacing:.05em; }
+    .pack .pack-info b { font-size:11px; display:block; font-weight:600; }
+    .pack.traditional .pack-line { color:var(--sand); }
+    .pack.premium { border-color:#665534; }
+    .pack.premium .pack-rule { height:2px; } .pack.premium .pack-line { color:var(--gold); }
+    .pack.premium .iso-pack { filter:brightness(0) saturate(100%) invert(66%) sepia(23%) saturate(805%) hue-rotate(3deg) brightness(88%) contrast(85%); }
+    .pack.mini { transform:scale(.72); transform-origin:top center; margin-bottom:-109px; }
+    .mock-caption { width:215px; margin-top:14px; text-align:center; font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); }
+    .pack-row { display:flex; gap:66px; align-items:flex-start; justify-content:center; margin-top:8px; }
+    .frontback { display:flex; gap:24px; align-items:center; }
+    .back-panel { height:340px; width:190px; padding:35px 17px 18px; border:1px solid #3f3932; background:#12110f; color:var(--cream); font-size:8px; }
+    .back-panel .tiny { font-size:7px; line-height:1.5; color:#cdc5b8; }
+    .back-panel .qr { float:right; width:44px; height:44px; margin:5px 0 10px 10px; background:repeating-conic-gradient(#eee 0 25%,#111 0 50%) 0/9px 9px; border:4px solid var(--cream); }
+    .back-panel .barcode { position:absolute; width:98px; height:34px; bottom:20px; right:16px; background:repeating-linear-gradient(90deg,#eee 0 2px,transparent 2px 4px,#eee 4px 5px,transparent 5px 8px); }
+    .shelf { position:relative; height:402px; margin-top:22px; padding:42px 42px 34px; background:#ddd7cc; border:1px solid rgba(14,13,12,.2); }
+    .shelf .shelf-top,.shelf .shelf-base { position:absolute; left:0; right:0; height:14px; background:#b7afa3; } .shelf .shelf-top {top:28px}.shelf .shelf-base {bottom:30px}
+    .shelf .shelf-packs { position:absolute; bottom:43px; left:130px; display:flex; align-items:end; gap:14px; }
+    .shelf .competitor { width:102px; height:197px; border-radius:6px 6px 3px 3px; display:flex; align-items:center; justify-content:center; color:#f8f6ed; font:13px/1.1 Georgia,serif; text-align:center; }
+    .shelf .competitor.one { background:#765b3d; }.shelf .competitor.two { background:#738284; }.shelf .competitor.three { background:#9d4a3f; }.shelf .competitor.four { background:#58705a; }
+    .shelf .shelf-packs .pack { width:116px; height:216px; transform:none; box-shadow:4px 7px 0 rgba(0,0,0,.16); }
+    .shelf .shelf-packs .pack .zip { top:20px; }.shelf .shelf-packs .pack .iso-pack { width:37px; height:31px; margin:34px auto 4px; }.shelf .shelf-packs .pack .pack-brand b {font-size:12px}.shelf .shelf-packs .pack .pack-brand i{font-size:14px}.shelf .shelf-packs .pack .pack-rule{margin:8px auto 6px;width:38px}.shelf .shelf-packs .pack .pack-line{font-size:6px}.shelf .shelf-packs .pack .pack-info{left:10px;right:10px;bottom:10px;padding-top:5px;font-size:4px}.shelf .shelf-packs .pack .pack-info b{font-size:6px}
+    .web-card { margin-top:20px; height:404px; display:grid; grid-template-columns:48% 52%; border:1px solid var(--line); background:var(--cream); color:var(--ink); }
+    .web-photo { position:relative; overflow:hidden; background:linear-gradient(140deg,#c3b39a,#eee8dc 55%,#967a61); display:flex; justify-content:center; align-items:flex-end; }
+    .web-photo::after { content:''; position:absolute; width:420px; height:260px; bottom:-160px; left:-80px; border:1px solid rgba(76,37,35,.25); border-radius:50%; box-shadow:0 0 0 35px rgba(76,37,35,.07),0 0 0 70px rgba(76,37,35,.07); }
+    .web-detail { padding:40px; }.web-detail h3 { font-size:27px; }.web-detail .price { font:31px 'Instrument Serif',Georgia,serif; font-style:italic; color:var(--cord); margin:12px 0; }.web-detail button { border:none; background:var(--ink); color:var(--cream); padding:13px 20px; font:700 10px Archivo,Arial,sans-serif; letter-spacing:.14em; text-transform:uppercase; }
+    .phone { position:relative; height:330px; width:181px; margin:18px auto; overflow:hidden; border:7px solid #151412; border-radius:23px; background:var(--cream); color:var(--ink); box-shadow:10px 13px 0 rgba(0,0,0,.16); }
+    .phone .story-top { background:var(--ink); height:113px; padding:18px; color:var(--cream); }.phone .story-top .story-word { font:25px/1 'Instrument Serif',Georgia,serif; font-style:italic; color:var(--gold); }.phone .story-body { padding:17px; font-size:9px; }.phone .story-line { height:1px; background:var(--gold); margin:14px 0; }
+    .box { position:relative; width:350px; height:185px; background:var(--ink); border:1px solid #555047; transform:skewY(-6deg); box-shadow:14px 18px 0 rgba(0,0,0,.19); padding:31px; }
+    .box::before { content:''; position:absolute; left:0; right:0; top:-50px; height:50px; background:#24211d; border:1px solid #555047; transform:skewX(-49deg); transform-origin:bottom left; }
+    .box .boxword { margin-left:85px; }.box .boxword b { display:block; font:24px/.8 'Archivo Black','Arial Black',sans-serif; letter-spacing:-.055em; }.box .boxword i{display:block;color:var(--gold);font:28px/.75 'Instrument Serif',Georgia,serif;font-style:italic;}.box .boxiso {position:absolute;width:64px;height:52px;left:19px;top:47px;}
+    .gift { position:relative; width:244px; height:305px; border:1px solid rgba(184,151,90,.65); background:linear-gradient(145deg,#151311,#070706); padding:34px; }.gift::before{content:'';position:absolute;left:17px;right:17px;top:17px;bottom:17px;border:1px solid rgba(184,151,90,.35)}.gift .giftiso{width:78px;height:63px;margin:32px auto 15px}.gift .giftword{text-align:center}.gift .giftword b{display:block;font:23px/.8 'Archivo Black','Arial Black',sans-serif;letter-spacing:-.05em}.gift .giftword i{display:block;font:28px/.75 'Instrument Serif',Georgia,serif;font-style:italic;color:var(--gold)}
+    .cup { position:relative; width:162px; height:210px; margin:0 auto; background:var(--cream); color:var(--ink); border-radius:9px 9px 28px 28px; box-shadow:10px 15px 0 rgba(0,0,0,.13); padding:30px 23px; }.cup::after { content:''; position:absolute; width:70px; height:65px; right:-52px; bottom:41px; border:13px solid var(--cream); border-left:none; border-radius:0 35px 35px 0; }.cup .cupiso{height:59px;width:73px;margin:0 auto 13px}.cup .cuplogo{text-align:center;font:14px/.8 'Archivo Black','Arial Black',sans-serif;letter-spacing:-.05em}.cup .cuplogo i{font:19px/.6 'Instrument Serif',Georgia,serif;font-style:italic;color:var(--cord);}
+    .prompt { border:1px solid var(--line); padding:17px; font-size:11px; min-height:130px; }.prompt b { display:block; color:var(--gold); font-size:10px; letter-spacing:.13em; text-transform:uppercase; margin-bottom:7px; }.cream .prompt b {color:var(--cord)}
+    .check { display:grid; grid-template-columns:repeat(2,1fr); gap:0 45px; margin-top:20px; }.check div { padding:8px 0; border-bottom:1px solid var(--line); font-size:13px; }.check div:before{content:'□';color:var(--gold);margin-right:9px;font-size:16px;vertical-align:-1px}.cream .check div:before{color:var(--cord)}
+    .field { color:var(--gold); font-weight:600; }.cream .field{color:var(--cord)}
+    a { color:inherit; }
+    @media print { html,body { background:transparent; } .page { margin:0; width:1280px; height:720px; } }
+    @media screen and (max-width:1320px) { .page { transform:scale(.72); transform-origin:top center; margin-bottom:-178px; } }
+  </style>
+</head>
+<body>
+  <section class="page cover">
+    <div class="altitude-line"></div>
+    <div class="inside">
+      <div class="eyebrow">Manual visual de marca · Ruta aprobada A</div>
+      <div class="hero">
+        <div class="wordmark"><span class="origin">ORIGEN</span><span class="noble">Noble</span></div>
+        <div class="rule"></div>
+        <h1>Altura<br>serena.</h1>
+        <p class="subtitle" style="margin-top:22px">Sistema de marca, empaque y aplicaciones para un café colombiano de la Serranía del Perijá.</p>
+      </div>
+    </div>
+    <img class="iso isocover white" src="origen-noble-isotipo-original.png" alt="Isotipo original Origen Noble">
+    <div class="footer"><span>Origen Noble · guía maestra</span><span class="folio">01 / 22</span></div>
+  </section>
+
+  <section class="page cream">
+    <div class="inside">
+      <div class="eyebrow">01 · Dirección elegida</div>
+      <div class="grid2" style="margin-top:29px;align-items:end">
+        <div><h2>La nobleza vive<br>en la precisión.</h2><div class="line"></div><p style="max-width:460px;font-size:17px">Altura serena evita el lujo estridente. La calidad se percibe en la proporción, la materia, el silencio visual y una historia que se puede comprobar.</p></div>
+        <div class="quote">Un origen tratado con respeto; una taza que acompaña todos los días.</div>
+      </div>
+      <div class="grid3" style="margin-top:55px">
+        <div class="essence-card"><div class="data-label">Foco</div><h3>Origen visible</h3><p>Perijá, 1.400 m, variedad Castillo y tostión media aparecen sin sobrecargar el frente.</p></div>
+        <div class="essence-card"><div class="data-label">Código</div><h3>Materia antes que brillo</h3><p>Negro mate, detalle dorado puntual y relieve en lugar de ornamento gratuito.</p></div>
+        <div class="essence-card"><div class="data-label">Promesa</div><h3>Cercanía cuidada</h3><p>Lenguaje claro, cálido y sin promesas de calidad que no estén sustentadas.</p></div>
+      </div>
+    </div>
+    <div class="footer"><span>Concepto rector</span><span class="folio">02 / 22</span></div>
+  </section>
+
+  <section class="page">
+    <div class="map-lines"></div>
+    <div class="inside">
+      <div class="eyebrow">02 · Esencia estratégica</div>
+      <div class="grid2" style="margin-top:30px;gap:78px">
+        <div class="stack">
+          <div><div class="data-label">Propósito</div><h3 style="margin-top:6px">Acercar un café colombiano de origen a la rutina, con respeto por lo que lo hace singular.</h3></div>
+          <div><div class="data-label">Visión</div><p style="margin-top:6px">Ser una referencia colombiana de café accesible en trato y rigurosa en cada detalle.</p></div>
+          <div><div class="data-label">Posicionamiento</div><p style="margin-top:6px">Café colombiano de la Serranía del Perijá, presentado con una elegancia contenida para quienes valoran el buen café sin códigos excluyentes.</p></div>
+        </div>
+        <div class="stack">
+          <div><div class="data-label">Arquetipo</div><h3 style="margin-top:6px">El cuidador con sensibilidad de creador.</h3></div>
+          <div><div class="data-label">Valores</div><p style="margin-top:6px">Cuidado · honestidad · oficio · claridad · calidez.</p></div>
+          <div><div class="data-label">Personalidad</div><p style="margin-top:6px">Serena, precisa, cercana, sobria y nunca distante.</p></div>
+        </div>
+      </div>
+      <div class="note" style="position:absolute;bottom:95px;max-width:720px">No se usarán palabras como “especialidad”, “orgánico”, “sostenible”, “premiado” o “de finca” sin evidencia verificable y autorización para comunicarlas.</div>
+    </div>
+    <div class="footer"><span>Esencia</span><span class="folio">03 / 22</span></div>
+  </section>
+
+  <section class="page sand">
+    <div class="inside">
+      <div class="eyebrow">03 · Narrativa de origen</div>
+      <div class="grid2" style="margin-top:32px;align-items:center">
+        <div><div class="display-noble" style="color:var(--cord)">Origen</div><h2 style="margin-top:23px">Una forma tranquila<br>de llegar más alto.</h2><p style="margin-top:22px;max-width:480px">Origen Noble nace de la Serranía del Perijá. No busca convertir el territorio en postal: lo deja hablar mediante datos concretos, una taza honesta y una presencia que no necesita levantar la voz.</p></div>
+        <div>
+          <div class="pill">Mensajes disponibles</div>
+          <ul class="list" style="margin-top:16px"><li>De la Serranía del Perijá a tu ritual diario.</li><li>Altura, cuidado y una tostión que deja hablar al café.</li><li>Una taza cercana. Un origen que permanece.</li></ul>
+          <div class="note" style="margin-top:18px">Municipio/vereda y proceso: <b>[POR CONFIRMAR]</b>. No aparecerán hasta contar con la información exacta.</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer"><span>Narrativa</span><span class="folio">04 / 22</span></div>
+  </section>
+
+  <section class="page cream">
+    <div class="inside">
+      <div class="eyebrow">04 · Activos de marca</div>
+      <div class="grid2" style="margin-top:28px;align-items:center">
+        <div style="display:flex;align-items:center;justify-content:center;height:420px;background:var(--ink)"><img class="iso white" src="origen-noble-isotipo-original.png" alt="Isotipo original aprobado" style="width:340px;height:264px"></div>
+        <div>
+          <h2>Isotipo<br>aprobado.</h2><p style="margin-top:16px;max-width:420px">El paisaje, el sol y la curva circular se usan exactamente como fueron entregados. No se redibuja, estira, recorta ni convierte en un patrón protagonista.</p>
+          <div class="line"></div>
+          <div class="wordmark dark"><span class="origin">ORIGEN</span><span class="noble">Noble</span></div>
+          <p class="caption" style="margin-top:12px">El wordmark se compone con Archivo Black e Instrument Serif Italic. Para aplicación final se debe entregar su arte vectorial maestro.</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer"><span>Logo · activos definidos, no rediseñados</span><span class="folio">05 / 22</span></div>
+  </section>
+
+  <section class="page">
+    <div class="inside">
+      <div class="eyebrow">05 · Sistema de logo</div>
+      <div class="grid3" style="margin-top:38px;align-items:end">
+        <div><div style="height:185px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center"><div class="logo-line"><img class="iso white" src="origen-noble-isotipo-original.png" style="width:72px;height:60px" alt=""><div class="wordmark"><span class="origin">ORIGEN</span><span class="noble">Noble</span></div></div></div><h3 style="margin-top:16px">Principal</h3><p class="caption" style="margin-top:4px">Firma horizontal para empaque, web y señalética.</p></div>
+        <div><div style="height:185px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center"><img class="iso white" src="origen-noble-isotipo-original.png" style="width:138px;height:107px" alt=""></div><h3 style="margin-top:16px">Sello</h3><p class="caption" style="margin-top:4px">Isotipo aislado para relieve, avatar y detalle de empaque.</p></div>
+        <div><div style="height:185px;border:1px solid var(--cream);background:var(--cream);display:flex;align-items:center;justify-content:center"><div class="logo-line"><img class="iso ink" src="origen-noble-isotipo-original.png" style="width:72px;height:60px" alt=""><div class="wordmark dark"><span class="origin">ORIGEN</span><span class="noble">Noble</span></div></div></div><h3 style="margin-top:16px">Monocromática</h3><p class="caption" style="margin-top:4px">Tinta casi negra sobre fondos claros; una tinta, sin dorado.</p></div>
+      </div>
+      <div class="grid2" style="margin-top:43px"><div><div class="data-label">Área de respeto</div><p style="margin-top:5px">Dejar alrededor de la firma una distancia mínima equivalente a la altura del sol del isotipo.</p></div><div><div class="data-label">Tamaño mínimo</div><p style="margin-top:5px">Firma: 28 mm de ancho impreso. Isotipo: 14 mm de ancho. No usar el isotipo menor a este tamaño.</p></div></div>
+    </div>
+    <div class="footer"><span>Logo · usos</span><span class="folio">06 / 22</span></div>
+  </section>
+
+  <section class="page cream">
+    <div class="inside">
+      <div class="eyebrow">06 · Color</div><h2 style="margin-top:12px">Paleta con función,<br>no con obligación.</h2>
+      <div class="palette">
+        <div class="swatch" style="background:var(--ink);color:var(--cream)"><b>Tinta</b><span>#0E0D0C · RGB 14 13 12<br>CMYK 0 7 14 95</span></div>
+        <div class="swatch" style="background:var(--cream);color:var(--ink);border-color:rgba(14,13,12,.15)"><b>Crema</b><span>#EFE8DA · RGB 239 232 218<br>CMYK 0 3 9 6</span></div>
+        <div class="swatch" style="background:var(--sand);color:var(--ink);border-color:rgba(14,13,12,.15)"><b>Arena</b><span>#E0C9A8 · RGB 224 201 168<br>CMYK 0 10 25 12</span></div>
+        <div class="swatch" style="background:var(--gold);color:var(--ink);border-color:rgba(14,13,12,.15)"><b>Dorado</b><span>#B8975A · RGB 184 151 90<br>CMYK 0 18 51 28</span></div>
+      </div>
+      <div class="grid2" style="margin-top:22px"><div><div class="data-label">Cordobán [supuesto]</div><p style="margin-top:5px">#4C2523 · RGB 76 37 35 · CMYK 0 51 54 70. Usar solo como profundidad editorial o código de línea, no junto a negro para texto.</p></div><div><div class="data-label">Proporción recomendada</div><p style="margin-top:5px">Negro 75% · crema 17% · dorado 6% · arena/cordobán 2%. El negro de la bolsa manda.</p></div></div>
+      <p class="color-note">Accesibilidad: crema, arena y dorado sobre tinta son legibles; dorado sobre crema, arena o blanco no se usa para texto. El dorado funciona en foil, filetes y sello, no en información técnica o legal.</p>
+    </div>
+    <div class="footer"><span>Color · Pantone se valida con proveedor y prueba física</span><span class="folio">07 / 22</span></div>
+  </section>
+
+  <section class="page sand">
+    <div class="inside">
+      <div class="eyebrow">07 · Tipografía</div>
+      <div class="grid2" style="margin-top:35px;gap:70px">
+        <div class="stack"><div class="type-test"><div class="data-label">Titulares · Archivo Black</div><div class="type-origin" style="margin-top:8px">ORIGEN</div><p class="caption" style="margin-top:9px">Uso: marca, línea, titulares breves y pesos de góndola. Nunca en párrafos.</p></div><div class="type-test"><div class="data-label">Acentos · Instrument Serif Italic</div><div class="type-noble" style="margin-top:12px">Noble</div><p class="caption" style="margin-top:9px">Uso: acentos editoriales, frases breves y el componente “Noble”.</p></div></div>
+        <div class="stack"><div class="type-test"><div class="data-label">Información · Archivo</div><p class="type-body" style="margin-top:12px">Archivo Regular y Medium son la tipografía funcional para notas de cata, trazabilidad, legales, precios y navegación digital.</p></div><div class="type-test"><div class="data-label">Jerarquía en empaque</div><p style="margin-top:10px;font-size:13px"><b>1.</b> Línea: 19–25 pt<br><b>2.</b> Producto/origen: 8–11 pt<br><b>3.</b> Datos técnicos: 7–8 pt<br><b>4.</b> Legal: según norma y prueba de legibilidad.</p></div></div>
+      </div>
+      <div class="note" style="margin-top:45px;max-width:800px">El archivo carga las familias tipográficas desde Google Fonts cuando hay conexión. Sin conexión, usa Arial Black y Georgia como respaldo visual aproximado; el arte final debe incluir o convertir las fuentes autorizadas.</div>
+    </div>
+    <div class="footer"><span>Tipografía</span><span class="folio">08 / 22</span></div>
+  </section>
+
+  <section class="page">
+    <div class="inside">
+      <div class="eyebrow">08 · Grilla y materialidad</div>
+      <div class="grid2" style="margin-top:25px;gap:52px">
+        <div class="layout-demo"><div><div class="data-label">Frente · tres zonas</div><div style="margin-top:22px"><div class="pill">01 · Identidad</div><p class="caption" style="margin:8px 0 21px">Isotipo + wordmark, con aire superior.</p><div class="pill">02 · Decisión</div><p class="caption" style="margin:8px 0 21px">Línea y tipo de producto.</p><div class="pill">03 · Evidencia</div><p class="caption" style="margin:8px 0">Origen, altura, variedad, tostión y gramaje.</p></div></div><div class="side"><div class="data-label">Regla</div><p style="margin-top:12px;font:31px/1 'Instrument Serif',Georgia,serif;font-style:italic">Dejar espacio es una decisión de calidad.</p></div></div>
+        <div><h2>El acabado<br>no reemplaza<br>la claridad.</h2><ul class="list" style="margin-top:22px"><li>Bolsa negra mate existente: se conserva.</li><li>Premium: hot foil dorado pequeño + bajo relieve del isotipo.</li><li>Tradicional: tinta crema/arena, sin foil obligatorio.</li><li>Evitar laminado brillante, degradados y sombras.</li><li>Solicitar prueba de color, adherencia y resistencia al roce sobre bolsa real.</li></ul></div>
+      </div>
+    </div>
+    <div class="footer"><span>Grilla · materia · acabados</span><span class="folio">09 / 22</span></div>
+  </section>
+
+  <section class="page cream">
+    <div class="inside">
+      <div class="eyebrow">09 · Voz y tono</div>
+      <div class="grid3" style="margin-top:34px">
+        <div><h3>Así hablamos</h3><ul class="list" style="margin-top:12px"><li>Con precisión, sin alardear.</li><li>Con cercanía, sin exceso de confianza.</li><li>Con datos cuando los tenemos; con silencio cuando no.</li></ul></div>
+        <div><h3>Palabras que sí</h3><p style="margin-top:12px">Origen · cuidado · ritual · taza · altura · detalle · compartir · Serranía.</p><div class="line"></div><h3>Palabras que evitamos</h3><p style="margin-top:12px">El mejor · milagroso · exclusivo para pocos · supremo · lujo extremo.</p></div>
+        <div><h3>Ejemplos</h3><p style="margin-top:12px;font:24px/1.04 'Instrument Serif',Georgia,serif;font-style:italic">“Una taza con origen.”</p><p style="margin-top:14px;font:24px/1.04 'Instrument Serif',Georgia,serif;font-style:italic">“El cuidado se nota en lo que permanece.”</p></div>
+      </div>
+      <div class="line" style="margin-top:42px"></div><div class="data-label">Eslogan — tres vías para validar</div><div style="display:flex;gap:50px;margin-top:13px;font:30px/1 'Instrument Serif',Georgia,serif;font-style:italic;color:var(--cord)"><span>Una taza con origen.</span><span>Altura que acompaña.</span><span>El origen, bien cuidado.</span></div>
+    </div>
+    <div class="footer"><span>Voz · eslogan no definido</span><span class="folio">10 / 22</span></div>
+  </section>
+
+  <section class="page">
+    <div class="inside">
+      <div class="eyebrow">10 · Arquitectura de portafolio</div><h2 style="margin-top:10px">Una familia. Dos ritmos.</h2>
+      <div class="grid2" style="margin-top:34px;gap:58px"><div style="border-top:2px solid var(--sand);padding-top:15px"><div class="data-label" style="color:var(--sand)">Tradicional · nombre de trabajo</div><h3 style="margin-top:8px;font-size:31px">Cercano y constante.</h3><p style="margin-top:13px">Café molido · 250 g, 500 g y 1 kg. Diferenciación por arena y tinta plana; etiqueta verbal grande para “molido”.</p><div class="note" style="margin-top:20px">El nombre comercial puede cambiar a “Casa” sin alterar retícula ni producción.</div></div><div style="border-top:2px solid var(--gold);padding-top:15px"><div class="data-label">Premium · nombre de trabajo</div><h3 style="margin-top:8px;font-size:31px">Preciso y contenido.</h3><p style="margin-top:13px">Café en grano o molido · 250 g y 500 g. Diferenciación mediante dorado y acabado, no mediante exceso de información.</p><div class="note" style="margin-top:20px">El nombre comercial puede cambiar a “Selección” cuando se defina su criterio objetivo.</div></div></div>
+      <div class="safe"><div class="good"><b>La familia siempre comparte</b>Bolsa negra, posición de logo, grilla, datos técnicos y lenguaje sobrio.</div><div class="bad"><b>No se diferencia con</b>Un color brillante total, un patrón distinto por SKU, medallas de “premium” o sellos decorativos.</div></div>
+    </div>
+    <div class="footer"><span>Portafolio</span><span class="folio">11 / 22</span></div>
+  </section>
+
+  <section class="page cream">
+    <div class="inside">
+      <div class="eyebrow">11 · Empaque · maqueta Tradicional</div>
+      <div class="grid2" style="margin-top:15px;align-items:center"><div class="pack-row"><div><div class="pack traditional"><div class="zip"></div><img class="iso iso-pack white" src="origen-noble-isotipo-original.png" alt=""><div class="pack-brand"><b>ORIGEN</b><i>Noble</i></div><div class="pack-rule"></div><div class="pack-line">Tradicional</div><div class="pack-info"><b>CAFÉ MOLIDO</b>SERRANÍA DEL PERIJÁ · 1.400 m<br>CASTILLO · TOSTIÓN MEDIA<br>CONT. NETO 250 g</div></div><div class="mock-caption">Frente · 250 g</div></div></div><div><h2>Lectura clara,<br>sin perder aire.</h2><ul class="list" style="margin-top:17px"><li>Arena identifica la línea sin convertirla en una bolsa clara.</li><li>“Café molido” responde primero a la decisión de compra.</li><li>Los datos reales se concentran en el tercio inferior.</li><li>El isotipo se usa en blanco, tal como fue cargado.</li></ul><div class="note" style="margin-top:18px">La maqueta es referencial: adaptar medidas al troquel aprobado por el proveedor de bolsas.</div></div></div>
+    </div>
+    <div class="footer"><span>Mockup vectorial · no es fotografía</span><span class="folio">12 / 22</span></div>
+  </section>
+
+  <section class="page">
+    <div class="inside">
+      <div class="eyebrow">12 · Empaque · maqueta Premium</div>
+      <div class="grid2" style="margin-top:13px;align-items:center"><div class="pack-row"><div><div class="pack premium"><div class="zip"></div><img class="iso iso-pack white" src="origen-noble-isotipo-original.png" alt=""><div class="pack-brand"><b>ORIGEN</b><i>Noble</i></div><div class="pack-rule"></div><div class="pack-line">Premium</div><div class="pack-info"><b>CAFÉ EN GRANO</b>SERRANÍA DEL PERIJÁ · 1.400 m<br>CASTILLO · TOSTIÓN MEDIA<br>CONT. NETO 250 g</div></div><div class="mock-caption">Frente · 250 g</div></div></div><div><h2>El valor está<br>en el detalle.</h2><ul class="list" style="margin-top:17px"><li>Isotipo en bajo relieve o foil dorado; escoger uno, no ambos si el presupuesto es limitado.</li><li>El dorado marca únicamente la línea y un filete.</li><li>La palabra “Premium” es provisional; el sistema funciona igual con “Selección”.</li><li>“En grano” y “molido” son campos intercambiables con la misma posición.</li></ul><div class="note" style="margin-top:18px">No se usa la palabra “reserva”, puntaje, proceso o notas de cata hasta confirmar que correspondan al producto.</div></div></div>
+    </div>
+    <div class="footer"><span>Mockup vectorial · no es fotografía</span><span class="folio">13 / 22</span></div>
+  </section>
+
+  <section class="page sand">
+    <div class="inside">
+      <div class="eyebrow">13 · Reverso, laterales y producción</div>
+      <div class="grid2" style="margin-top:22px;align-items:center"><div class="frontback"><div class="back-panel" style="position:relative"><div class="data-label">Origen Noble</div><div class="qr"></div><h3 style="font-size:17px;margin-top:18px">Un café con origen.</h3><p class="tiny" style="margin-top:12px">De la Serranía del Perijá. Variedad Castillo, tostión media.</p><p class="tiny" style="margin-top:12px"><b>Proceso:</b> [POR CONFIRMAR]<br><b>Notas:</b> [POR CONFIRMAR]</p><p class="tiny" style="margin-top:12px">Escanea para conocer el origen y las recomendaciones de preparación.</p><div class="barcode"></div></div><div class="caption" style="max-width:110px">Reverso referencial<br><br>QR de experiencia, no sustituto de información obligatoria.</div></div><div><h2>Lo técnico<br>también respira.</h2><ul class="list" style="margin-top:15px"><li>Reservar zona limpia para lote, fecha de tostión y vencimiento/duración mínima.</li><li>EAN-13: reverso, cuadrante inferior derecho, con zonas de silencio; no inventar el número.</li><li>QR de consumidor: lateral o reverso, separado del código de barras si no se usará en POS.</li><li>El cierre, la válvula y cualquier impresión del proveedor deben quedar fuera de la jerarquía de marca.</li></ul></div></div>
+    </div>
+    <div class="footer"><span>Empaque · estructura informativa</span><span class="folio">14 / 22</span></div>
+  </section>
+
+  <section class="page cream">
+    <div class="inside">
+      <div class="eyebrow">14 · Rotulado y cumplimiento en Colombia</div>
+      <div class="grid2" style="margin-top:26px;gap:64px"><div><h2>Reservar antes<br>de diseñar.</h2><p style="margin-top:16px">Estos campos se dejan previstos en el arte, pero deben ser validados por responsable sanitario y la normativa vigente antes de imprimir.</p><ul class="list" style="margin-top:16px"><li>Denominación del alimento, contenido neto, ingredientes y datos del fabricante/envasador.</li><li>Lote, fecha de vencimiento o duración mínima, conservación y país de origen, según aplique.</li><li>Registro, permiso o notificación sanitaria solo si corresponde; no inventar un número.</li><li>Advertencias, tabla nutricional o excepciones solo después de revisar la formulación real.</li></ul></div><div><div class="pill">Regla de diseño</div><p style="margin-top:14px;font:27px/1.05 'Instrument Serif',Georgia,serif;font-style:italic;color:var(--cord)">La estética limpia no es retirar obligaciones: es darles una zona legible y ordenada.</p><div class="line"></div><p class="caption">Referencia de trabajo: la Resolución 810 de 2021 contempla excepciones de etiquetado nutricional para productos de un ingrediente sin aditivos y lista determinadas categorías de café; la aplicabilidad exacta depende de formulación y clasificación. Validar con INVIMA / asesor regulatorio antes de producir.</p><p class="caption" style="margin-top:12px"><a href="https://normograma.invima.gov.co/compilacion/docs/resolucion_minproteccion_5109_2005.htm">INVIMA · Resolución 5109/2005 y modificaciones</a><br><a href="https://normograma.invima.gov.co/compilacion/docs/resolucion_minsaludps_0810_2021.htm">Ministerio de Salud · Resolución 810/2021</a></p></div></div>
+    </div>
+    <div class="footer"><span>Legal · revisar antes de impresión</span><span class="folio">15 / 22</span></div>
+  </section>
+
+  <section class="page">
+    <div class="inside">
+      <div class="eyebrow">15 · Supermercado</div><h2 style="margin-top:11px">Diseñado para<br>ser reconocido, no para gritar.</h2>
+      <div class="shelf"><div class="shelf-top"></div><div class="shelf-base"></div><div class="shelf-packs"><div class="competitor one">Café<br>genérico</div><div class="pack traditional"><div class="zip"></div><img class="iso iso-pack white" src="origen-noble-isotipo-original.png" alt=""><div class="pack-brand"><b>ORIGEN</b><i>Noble</i></div><div class="pack-rule"></div><div class="pack-line">Tradicional</div><div class="pack-info"><b>MOLIDO</b>250 g</div></div><div class="pack premium"><div class="zip"></div><img class="iso iso-pack white" src="origen-noble-isotipo-original.png" alt=""><div class="pack-brand"><b>ORIGEN</b><i>Noble</i></div><div class="pack-rule"></div><div class="pack-line">Premium</div><div class="pack-info"><b>EN GRANO</b>250 g</div></div><div class="competitor two">Café<br>genérico</div><div class="competitor three">Café<br>genérico</div><div class="competitor four">Café<br>genérico</div></div></div>
+      <div class="grid3" style="margin-top:12px"><div><div class="data-label">1,5 m</div><p>Marca y bloque negro reconocibles.</p></div><div><div class="data-label">70 cm</div><p>Línea y forma del café diferenciadas.</p></div><div><div class="data-label">En mano</div><p>Datos, QR, lote y trazabilidad.</p></div></div>
+    </div>
+    <div class="footer"><span>Góndola simulada · competidores genéricos</span><span class="folio">16 / 22</span></div>
+  </section>
+
+  <section class="page cream">
+    <div class="inside">
+      <div class="eyebrow">16 · Online</div><h2 style="margin-top:11px">La misma claridad,<br>en una pantalla.</h2>
+      <div class="web-card"><div class="web-photo"><div class="pack premium" style="transform:scale(.76);transform-origin:bottom center;margin-bottom:-96px"><div class="zip"></div><img class="iso iso-pack white" src="origen-noble-isotipo-original.png" alt=""><div class="pack-brand"><b>ORIGEN</b><i>Noble</i></div><div class="pack-rule"></div><div class="pack-line">Premium</div><div class="pack-info"><b>CAFÉ EN GRANO</b>SERRANÍA DEL PERIJÁ · 1.400 m<br>CASTILLO · TOSTIÓN MEDIA<br>CONT. NETO 250 g</div></div></div><div class="web-detail"><div class="eyebrow">Origen Noble · Premium</div><h3 style="margin-top:9px">Café en grano</h3><div class="price">$ [POR CONFIRMAR]</div><p style="font-size:12px">Serranía del Perijá · 1.400 m<br>Castillo · tostión media</p><button style="margin-top:20px">Agregar al carrito</button><div class="line"></div><p class="caption">La primera imagen de producto debe conservar el frente limpio y ser legible como miniatura.</p></div></div>
+    </div>
+    <div class="footer"><span>E-commerce · maqueta editorial</span><span class="folio">17 / 22</span></div>
+  </section>
+
+  <section class="page sand">
+    <div class="inside">
+      <div class="eyebrow">17 · Set digital estándar</div>
+      <div class="grid2" style="margin-top:30px;align-items:center"><div><h2>Siete imágenes.<br>Una misma voz.</h2><ol style="margin:19px 0 0;padding-left:21px;line-height:1.85;font-size:14px"><li>Frente sobre fondo crema.</li><li>Frente y lateral, sin props.</li><li>Detalle de acabado y sello.</li><li>Información de origen verificable.</li><li>Modo de preparación.</li><li>Escena de ritual, con aire.</li><li>Formato/comparativo de tamaño.</li></ol></div><div class="phone"><div class="story-top"><div class="data-label" style="color:var(--sand)">Origen Noble</div><div class="story-word" style="margin-top:16px">Una taza<br>con origen.</div></div><div class="story-body"><b>Premium · en grano</b><div class="story-line"></div>Serranía del Perijá<br>1.400 m · Castillo<br>Tostión media<br><br><span style="color:var(--cord);font-weight:700">Desliza para conocerlo →</span></div></div></div></div>
+      <div class="note" style="margin-top:20px">Instagram está pendiente de renovación: la biografía, enlaces y mensajes directos deben definirse antes de colocar usuarios o llamados a la acción impresos.</div>
+    </div>
+    <div class="footer"><span>Redes · historia maquetada</span><span class="folio">18 / 22</span></div>
+  </section>
+
+  <section class="page">
+    <div class="inside">
+      <div class="eyebrow">18 · Regalo, despacho y punto de contacto</div>
+      <div class="grid3" style="margin-top:51px;align-items:end"><div style="display:flex;flex-direction:column;align-items:center"><div class="gift"><img class="iso giftiso white" src="origen-noble-isotipo-original.png" alt=""><div class="giftword"><b>ORIGEN</b><i>Noble</i></div></div><div class="mock-caption">Estuche de regalo</div></div><div style="display:flex;flex-direction:column;align-items:center"><div class="box"><img class="iso boxiso white" src="origen-noble-isotipo-original.png" alt=""><div class="boxword"><b>ORIGEN</b><i>Noble</i></div></div><div class="mock-caption" style="margin-top:42px">Caja de envío</div></div><div style="display:flex;flex-direction:column;align-items:center"><div class="cup"><img class="iso cupiso ink" src="origen-noble-isotipo-original.png" alt=""><div class="cuplogo">ORIGEN<br><i>Noble</i></div></div><div class="mock-caption">Taza de cerámica</div></div></div>
+      <p class="caption" style="margin-top:20px;text-align:center">Piezas limpias, con una sola firma y sin acumulación de frases, sellos o iconografía secundaria.</p>
+    </div>
+    <div class="footer"><span>Aplicaciones · mockups vectoriales</span><span class="folio">19 / 22</span></div>
+  </section>
+
+  <section class="page cream">
+    <div class="inside">
+      <div class="eyebrow">19 · Dirección de fotografía e ilustración</div>
+      <div class="grid2" style="margin-top:28px;gap:60px"><div><h2>La luz acompaña;<br>no dramatiza.</h2><ul class="list" style="margin-top:19px"><li>Luz lateral suave, sombras profundas pero legibles.</li><li>Fondos: piedra, madera oscura, cerámica crema, lino y papel sin recubrir.</li><li>Una bolsa o una taza por toma; props funcionales, no decoración.</li><li>Evitar vapor teatral, granos dispersos, humo, tricolor, sombreros, mulas y postales turísticas.</li></ul></div><div><div class="data-label">Ilustración</div><p style="margin-top:9px">Solo líneas topográficas abstractas, horizontes o trazos de relieve de baja densidad. No representar comunidades, personas, textiles, fauna local ni símbolos culturales sin autorización explícita y colaboración.</p><div class="line"></div><div class="data-label">Uniformes y punto de venta</div><p style="margin-top:9px">Delantal negro o cordobán, isotipo discreto al pecho; señalética crema con tinta casi negra y acentos dorados mínimos.</p></div></div>
+    </div>
+    <div class="footer"><span>Imagen · criterio de arte</span><span class="folio">20 / 22</span></div>
+  </section>
+
+  <section class="page">
+    <div class="inside">
+      <div class="eyebrow">20 · Prompts fotorrealistas opcionales</div><h2 style="margin-top:10px">Para generar después.<br>No son los mockups.</h2>
+      <div class="grid2" style="margin-top:23px;gap:18px"><div class="prompt"><b>Bolsa Premium · 4:5</b>Fotografía de producto premium de una bolsa negra mate de café Origen Noble, frente legible, isotipo montañoso blanco y detalle dorado contenido, sobre piedra oscura, luz lateral suave de tarde, lente 85 mm, fondo negro cálido desenfocado, una taza de cerámica crema a distancia, sin granos esparcidos, sin texto inventado, sin vapor excesivo, sin marcas ajenas.</div><div class="prompt"><b>Familia · 3:2</b>Fotografía editorial de dos bolsas de café negro mate Origen Noble, Tradicional y Premium, de pie en composiciones escalonadas, fondo crema mate, luz de ventana difusa, lente 50 mm, sombras suaves, mucho espacio negativo, identidad exacta desde las referencias cargadas, sin objetos extra ni textos nuevos.</div><div class="prompt"><b>Góndola · 16:9</b>Fotografía de estantería de supermercado contemporáneo, familia Origen Noble visible entre empaques genéricos sin marcas legibles, bolsas negras mate agrupadas con tres facings, iluminación de retail realista, ángulo frontal a 1,5 metros, diseño limpio y sin saturación, sin precios ni claims inventados.</div><div class="prompt"><b>Despacho · 4:5</b>Fotografía cenital de caja de envío negra mate Origen Noble abierta sobre mesa de madera oscura, papel crema, tarjeta mínima y una bolsa negra mate; iluminación natural suave, lente 50 mm, estética de lujo silencioso, sin cintas doradas excesivas, sin texto adicional.</div></div>
+    </div>
+    <div class="footer"><span>Prompts · subir el isotipo y arte final como referencia</span><span class="folio">21 / 22</span></div>
+  </section>
+
+  <section class="page cord">
+    <div class="inside">
+      <div class="eyebrow" style="color:var(--sand)">21 · Cierre y aprobación</div><h2 style="margin-top:10px">Antes de ir<br>a impresión.</h2>
+      <div class="check"><div>Confirmar si “Tradicional / Premium” serán nombres finales o de trabajo.</div><div>Confirmar municipio/vereda y proceso de beneficio.</div><div>Definir notas de cata y criterio real de diferenciación Premium.</div><div>Corregir matriz de formatos y precios.</div><div>Obtener troquel, medidas, material, válvula y zona imprimible del proveedor.</div><div>Validar rotulado, vida útil y obligación sanitaria con responsable competente.</div><div>Asignar GTIN/EAN-13 distinto por presentación y arte final de QR.</div><div>Hacer prueba de color, foil, adhesión y lectura de código sobre bolsa real.</div></div>
+      <div class="note" style="margin-top:30px;border-color:var(--sand);color:#eadfce;max-width:885px">Decisión tomada: Ruta A, Altura serena. La guía conserva la bolsa negra y usa el isotipo original cargado. Todo campo marcado <b>[POR CONFIRMAR]</b> debe resolverse antes de liberar artes de producción.</div>
+    </div>
+    <div class="footer"><span>Origen Noble · altura serena</span><span class="folio" style="color:var(--sand)">22 / 22</span></div>
+  </section>
+</body>
+</html>
